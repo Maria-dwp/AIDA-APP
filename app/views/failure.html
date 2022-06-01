@@ -5,6 +5,49 @@
 {% endblock %}
 
 {% block beforeContent %}
+<div class="govuk-notification-banner" style="margin-bottom:-25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+
+ <div class="govuk-phase-banner" style="padding-bottom:0px;">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <p>
+
+      <span class="govuk-phase-banner__text" style="color:white;font-size:1.8em; font-weight:bold;">
+        Jane Doe
+      </span>
+      <span class="govuk-phase-banner__text" style="color:white; font-size:1.2em; padding:10px 0px 0px 10px;">
+        QQ 12 34 56 C
+      </span>
+
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
+    <p><strong class="govuk-tag--orange">
+      LOW CONFIDENCE
+    </strong></p>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <p><span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:20px;">
+        Date of birth: 4 June 1972
+      </span></p>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        <span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:16px;">
+          Mobile: 07771 900 900
+        </span>
+      </p>
+    </div>
+
+  </div>
+
+</div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -22,55 +65,26 @@
 
         <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
         <h2 class="govuk-error-summary__title" id="error-summary-title">
-          There is a problem
+          IDV Complete Weak Pass
         </h2>
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#passport-issued-day">The date your passport was issued must be in the past</a>
+              <a href="#passport-issued-day">Customer is part verified</a>
             </li>
             <li>
-              <a href="#postcode-input">Enter a postcode, like AA1 1AA</a>
+              <a href="#postcode-input">Not autorised for voice print</a>
             </li>
           </ul>
         </div>
       </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button" data-module="govuk-button">Exit & Close</button>
 
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
 
-      <aside class="app-related-items" role="complementary">
-        <h2 class="govuk-heading-m" id="subsection-title">
-          Questions Asked
-        </h2>
-        <div class="govuk-inset-text">
-          <h2 class="govuk-error-summary__title" id="error-summary-title">
-    Searchlight
-  </h2>
-    <div id="passport-issued-hint" class="govuk-hint">
-  Q1 Current Bank account no <br/>
-  <strong class="govuk-tag">
-    PASSED
-  </strong>
-</div>
-
-
-          <p>&nbsp;</p>
-
-          <h2 class="govuk-error-summary__title" id="error-summary-title">JSAPS</h2>
-          Q6 from benefit section
-          <strong class="govuk-tag">
-            PASSED
-          </strong>
-        </div>
-
-      </aside>
-
-    </div>
   </div>
 
 {% endblock %}
