@@ -6,56 +6,11 @@
 
 {% block header %}
   <!-- Blank header with no service name for the start page -->
-
   {{ govukHeader() }}
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-notification-banner" style="margin-bottom:-25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-
- <div class="govuk-phase-banner" style="padding-bottom:0px;">
-
-  <div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-    <p>
-
-      <span class="govuk-phase-banner__text" style="color:white;font-size:1.8em; font-weight:bold;">
-        Jane Doe
-      </span>
-      <span class="govuk-phase-banner__text" style="color:white; font-size:1.2em; padding:10px 0px 0px 10px;">
-        QQ 12 34 56 C
-      </span>
-
-    </p>
-  </div>
-  <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
-    <p><strong class="govuk-tag--orange">
-      LOW CONFIDENCE
-    </strong></p>
-  </div>
-</div>
-</div>
-  </div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <p><span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:20px;">
-        Date of birth: 4 June 1972
-      </span></p>
-    </div>
-    <div class="govuk-grid-column-two-thirds">
-      <p>
-        <span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:16px;">
-          Mobile: 07771 900 900
-        </span>
-      </p>
-    </div>
-
-  </div>
-
-</div>
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-<!--  <div class="govuk-breadcrumbs">
+  <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
@@ -67,87 +22,69 @@
         <a class="govuk-breadcrumbs__link">Subsection</a>
       </li>
     </ol>
-  </div> --!>
+  </div>
 {% endblock %}
-
+Hello
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <!--{% if serviceName %} {{ serviceName }} {% endif %} *\ --!>
-        Customer Authentication
+        {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
 
+      <p>Use this service to:</p>
 
+      <ul class="govuk-list govuk-list--bullet">
+        <li>do something</li>
+        <li>update your name, address or other details</li>
+        <li>do something else</li>
+      </ul>
 
-      <p>Ask one question from JSAPS</p>
+      <p>Registering takes around 5 minutes.</p>
 
-      <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
-            Pass
-          </h1>
-        </legend>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-
-            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-              No
-            </label>
-          </div>
-
-
-        </div>
-
-      </fieldset>
-    </div>
-
-    <!--  <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+      <a href="question.html" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
         <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
         </svg>
-      </a> --!>
+      </a>
 
-<a href="success.html"<button class="govuk-button" data-module="govuk-button">Continue</button> </a>
+      <h2 class="govuk-heading-m">Before you start ---></h2>
+
+      <p>You can also <a href="#">register by post</a>.</p>
+
+      <p>The online service is also <a href="#">available in Welsh (ar gael yn Gymraeg)</a>.</p>
+
+      <p>You can’t register for this service if you’re in the UK illegally.</p>
+
     </div>
 
     <div class="govuk-grid-column-one-third">
 
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
-          Questions Asked
+          Subsection
         </h2>
-        <div class="govuk-inset-text">
-          <h2 class="govuk-error-summary__title" id="error-summary-title">
-    Searchlight
-  </h2>
-    <div id="passport-issued-hint" class="govuk-hint">
-  Q1 Current Bank account no <br/>
-  <strong class="govuk-tag">
-    PASSED
-  </strong>
-</div>
-
-
-          <p>&nbsp;</p>
-
-          <h2 class="govuk-error-summary__title" id="error-summary-title">JSAPS</h2>
-          Q3 from benefit section
-          <strong class="govuk-tag--orange">
-            FAILED
-          </strong>
-        </div>
-
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </aside>
 
     </div>
