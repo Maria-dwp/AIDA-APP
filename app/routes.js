@@ -47,7 +47,7 @@ router.post('/customer-answer', function (req, res) {
           res.redirect('Q3-Check-ID-at-Risk')
         } else if (passYes == "No") {
           // Send user to ineligible page
-          res.redirect('failure')
+          res.redirect('failure2')
         }
 
       })
@@ -60,7 +60,7 @@ router.post('/customer-answer', function (req, res) {
           // Check whether the variable matches a condition
           if (passYes == "Yes"){
             // Send user to next page
-            res.redirect('failure')
+            res.redirect('failure2')
           } else if (passYes == "No") {
             // Send user to ineligible page
             res.redirect('Q4-Check-Date-of-Death')
@@ -76,7 +76,7 @@ router.post('/customer-answer', function (req, res) {
             // Check whether the variable matches a condition
             if (passYes == "Yes"){
               // Send user to next page
-              res.redirect('failure')
+              res.redirect('failure2')
             } else if (passYes == "No") {
               // Send user to ineligible page
               res.redirect('Q5-Check-Customer-History')
@@ -95,7 +95,7 @@ router.post('/customer-answer', function (req, res) {
                 res.redirect('success')
               } else if (passYes == "No") {
                 // Send user to ineligible page
-                res.redirect('failure')
+                res.redirect('failure1')
               }
 
             })
