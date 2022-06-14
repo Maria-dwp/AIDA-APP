@@ -24,8 +24,8 @@
     </p>
   </div>
   <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
-    <p><strong class="govuk-tag--red">
-      NO CONFIDENCE
+    <p><strong class="govuk-tag--orange">
+      LOW CONFIDENCE
     </strong></p>
   </div>
 </div>
@@ -56,72 +56,35 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Check ID at Risk</h1>
-
-      <form class="form" action="/customer-answer3" method="post">
-
-        <p>Does the customer record contain an ID at Risk flag?</p>
 
 
-  <div class="govuk-form-group">
-  {{ govukRadios({
-  idPrefix: "customer_answer3",
-  name: "customer_answer3",
-  fieldset: {
-    legend: {
-      text: "",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "Yes",
-      text: "Yes"
-    },
-    {
-      value: "No",
-      text: "No"
-    }
-  ]
-}) }}
-</div>
+      <form class="form" action="/url/of/next/page" method="post">
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          IDV complete PASSED
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#passport-issued-day">Customer is fully verified.</a>
+            </li>
+            <li>
+              <a href="#postcode-input">NOT AUTHORISED FOR VOICE PRINT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+        <button class="govuk-button" data-module="govuk-button">Exit & Close</button>
 
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
 
-      <aside class="app-related-items" role="complementary">
-        <h2 class="govuk-heading-m" id="subsection-title">
-          Questions Asked
-        </h2>
-        <div class="govuk-inset-text">
-          <h2 class="govuk-error-summary__title" id="error-summary-title">
-    Searchlight
-  </h2>
-    <div id="passport-issued-hint" class="govuk-hint">
-      CIS2 | cis_benefit <br/>
-  <strong class="govuk-tag--red">
-    FAILED
-  </strong>
-</div>
-
-
-          <p>&nbsp;</p>
-
-          <h2 class="govuk-error-summary__title" id="error-summary-title">JSAPS</h2>
-          ESA3 | esa_last_payment_amount
-          <strong class="govuk-tag--red">
-            FAILED
-          </strong>
-        </div>
-
-      </aside>
-
-    </div>
   </div>
 
 {% endblock %}
