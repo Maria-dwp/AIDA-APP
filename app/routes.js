@@ -76,7 +76,7 @@ router.post('/customer-answer', function (req, res) {
             // Check whether the variable matches a condition
             if (passYes == "Yes"){
               // Send user to next page
-              res.redirect('failure2')
+              res.redirect('failure3')
             } else if (passYes == "No") {
               // Send user to ineligible page
               res.redirect('Q5-Check-Customer-History')
