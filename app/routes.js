@@ -60,10 +60,26 @@ router.post('/customer-answer', function (req, res) {
           // Check whether the variable matches a condition
           if (passYes == "Yes"){
             // Send user to next page
-            res.redirect('failure2')
+            res.redirect('question_3_1')
           } else if (passYes == "No") {
             // Send user to ineligible page
-            res.redirect('Q4-Check-Date-of-Death')
+            res.redirect('question_3_1')
+          }
+
+        })
+
+      router.post('/customer-answer3-1', function (req, res) {
+
+          var passYes = req.session.data['customer_answer3-1']
+
+        console.log("passYes", passYes);
+          // Check whether the variable matches a condition
+          if (passYes == "Yes"){
+            // Send user to next page
+            res.redirect('failure1')
+          } else if (passYes == "No") {
+            // Send user to ineligible page
+            res.redirect('failure2')
           }
 
         })
