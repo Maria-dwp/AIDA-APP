@@ -92,13 +92,30 @@ router.post('/customer-answer', function (req, res) {
             // Check whether the variable matches a condition
             if (passYes == "Yes"){
               // Send user to next page
-              res.redirect('failure2')
+              res.redirect('question_4_1')
             } else if (passYes == "No") {
               // Send user to ineligible page
-              res.redirect('Q5-Check-Customer-History')
+              res.redirect('question_4_1')
             }
 
           })
+
+
+          router.post('/customer-answer4-1', function (req, res) {
+
+              var passYes = req.session.data['customer_answer4-1']
+
+            console.log("passYes", passYes);
+              // Check whether the variable matches a condition
+              if (passYes == "Yes"){
+                // Send user to next page
+                res.redirect('success')
+              } else if (passYes == "No") {
+                // Send user to ineligible page
+                res.redirect('failure3')
+              }
+
+            })
 
           router.post('/customer-answer5', function (req, res) {
 
