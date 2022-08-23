@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-
 <div class="govuk-notification-banner" style="margin-bottom:-25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
   <div class="govuk-notification-banner__header">
 
@@ -25,20 +24,30 @@
     </p>
   </div>
   <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
-    <p><strong class="govuk-tag--orange">
-      LOW CONFIDENCE
+    <p><strong class="govuk-tag--red">
+      NO CONFIDENCE
     </strong></p>
   </div>
 </div>
 </div>
   </div>
-  </div>
+  <!--<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <p><span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:20px;">
+        Date of birth: 4 June 1972
+      </span></p>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        <span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:16px;">
+          Mobile: 07771 900 900
+        </span>
+      </p>
+    </div>
 
+  </div> -->
 
-
-
-
-
+</div>
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-three-quarters">
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
@@ -49,17 +58,19 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Ask one question from JSAPS</h1>
 
-      <form class="form" action="/customer-answer" method="post">
+      <h1 class="govuk-heading-xl">Ask one question from Searchlight</h1>
+
+      <form class="form" action="/customer-answer3" method="post">
+
 
         <p>Did the caller answer correctly?</p>
 
 
   <div class="govuk-form-group">
   {{ govukRadios({
-  idPrefix: "customer_answer",
-  name: "customer_answer",
+  idPrefix: "customer_answer3",
+  name: "customer_answer3",
   fieldset: {
     legend: {
       text: "",
@@ -79,11 +90,8 @@
   ]
 }) }}
 </div>
-<br/>
-<!--<h2 class="govuk-heading-m">Now send your application</h2> -->
 
-<p class="govuk-body">I confirm the answer is correct, based on the details available to me.</p>
-        <button class="govuk-button" data-module="govuk-button">Confirm</button>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
 
@@ -99,9 +107,9 @@
     Searchlight
   </h2>
 
-  CIS Other benefits<br/>
-  <strong class="govuk-tag govuk-tag--green">
-    PASSED
+  CIS Child's DOB <br/>
+  <strong class="govuk-tag--red">
+    FAILED
   </strong>
 
 
@@ -109,8 +117,8 @@
           <p>&nbsp;</p>
 
           <h2 class="govuk-error-summary__title" id="error-summary-title">JSAPS</h2>
-          ESA last payment date
-          <br/><strong class="govuk-tag--orange">
+          ESA claim start date<br/>
+          <strong class="govuk-tag--red">
             FAILED
           </strong>
         </div>
@@ -118,8 +126,6 @@
       </aside>
 
     </div>
-
   </div>
-  
 
 {% endblock %}
