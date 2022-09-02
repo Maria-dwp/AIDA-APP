@@ -23,11 +23,11 @@
 
     </p>
   </div>
-  <!--<div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
+  <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
     <p><strong class="govuk-tag--orange">
       LOW CONFIDENCE
     </strong></p>
-  </div> -->
+  </div>
 </div>
 </div>
   </div>
@@ -56,10 +56,10 @@ Hello
       {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
       <form name='form' method="post" autocomplete="off" novalidate="false">
 
-      <!--  <ul class="govuk-list govuk-list--bullet">
+        <ul class="govuk-list govuk-list--bullet">
 
           <li>This service is not for appointee verification. Please follow guidelines for Appointee verification or alternative enquiries.</li>
-        </ul> -->
+        </ul>
         {{ govukCheckboxes({
         idPrefix: "callerType",
         name: "callerType",
@@ -83,11 +83,12 @@ Hello
 
 
     </div>
+
     <div class="govuk-grid-column-one-third">
 
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
-          Please note
+          Questions Asked
         </h2>
         <div class="govuk-inset-text">
 
@@ -104,6 +105,5 @@ Hello
       </aside>
 
     </div>
-
   </div>
 {% endblock %}
