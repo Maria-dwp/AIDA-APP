@@ -47,7 +47,7 @@ router.post('/customer-answer', function (req, res) {
           res.redirect('failure1')
         } else if (passYes == "No") {
           // Send user to ineligible page
-          res.redirect('failure')
+          res.redirect('failure2')
         }
 
       })
