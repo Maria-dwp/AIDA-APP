@@ -44,13 +44,69 @@ router.post('/customer-answer', function (req, res) {
         // Check whether the variable matches a condition
         if (passYes == "Yes"){
           // Send user to next page
-          res.redirect('success')
+          res.redirect('failure1')
         } else if (passYes == "No") {
           // Send user to ineligible page
-          res.redirect('failure2')
+          res.redirect('failure')
         }
 
       })
+
+
+router.post('/startlc', function (req, res) {
+
+  if (req.body.callerType!=='_unchecked') {
+
+    res.redirect('/question.html');
+  } else {
+    res.render('startlc', {
+      errormsg: 'Please confirm to proceed',
+      t: (x) => x, // translate
+    });
+    // res.redirect('/index');
+  }
+})
+
+router.post('/startnc', function (req, res) {
+
+  if (req.body.callerType!=='_unchecked') {
+
+    res.redirect('/question_1.html');
+  } else {
+    res.render('startnc', {
+      errormsg: 'Please confirm to proceed',
+      t: (x) => x, // translate
+    });
+    // res.redirect('/index');
+  }
+})
+
+router.post('/startnc1', function (req, res) {
+
+  if (req.body.callerType!=='_unchecked') {
+
+    res.redirect('/question_3.html');
+  } else {
+    res.render('startnc1', {
+      errormsg: 'Please confirm to proceed',
+      t: (x) => x, // translate
+    });
+    // res.redirect('/index');
+  }
+})
+router.post('/startnc2', function (req, res) {
+
+  if (req.body.callerType!=='_unchecked') {
+
+    res.redirect('/question_4.html');
+  } else {
+    res.render('startnc2', {
+      errormsg: 'Please confirm to proceed',
+      t: (x) => x, // translate
+    });
+    // res.redirect('/index');
+  }
+})
 
       router.post('/customer-answer3', function (req, res) {
 
